@@ -53,12 +53,7 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
-            'sslmode' => env('DB_SSLMODE', 'require'),
-            'options' => array_filter([
-                PDO::PGSQL_ATTR_CONNECTION_OPTIONS => array_filter([
-                    'endpoint' => env('DB_ENDPOINT_ID'),
-                ]),
-            ]),
+            'sslmode' => env('DB_SSLMODE', 'prefer'),
         ],
 
         'sqlsrv' => [
