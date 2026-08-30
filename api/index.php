@@ -15,10 +15,9 @@ require __DIR__ . '/../vendor/autoload.php';
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
 // Force HTTPS APP_URL (Vercel auto-injects http://)
-if (!isset($_SERVER['APP_URL']) || str_starts_with($_SERVER['APP_URL'], 'http://')) {
-    $_SERVER['APP_URL'] = 'https://bimss.vercel.app';
-}
-config(['app.url' => $_SERVER['APP_URL']]);
+putenv('APP_URL=https://bimss.vercel.app');
+$_ENV['APP_URL'] = 'https://bimss.vercel.app';
+$_SERVER['APP_URL'] = 'https://bimss.vercel.app';
 
 // Override storage path for Vercel's writable /tmp
 $app->useStoragePath('/tmp/storage');
