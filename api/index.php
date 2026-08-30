@@ -2,11 +2,6 @@
 
 define('LARAVEL_START', microtime(true));
 
-// Force HTTPS APP_URL BEFORE bootstrap (Vercel auto-injects http://)
-putenv('APP_URL=https://bimss.vercel.app');
-$_ENV['APP_URL'] = 'https://bimss.vercel.app';
-$_SERVER['APP_URL'] = 'https://bimss.vercel.app';
-
 // Maintenance mode check (same as public/index.php)
 if (file_exists($maintenance = __DIR__ . '/../storage/framework/maintenance.php')) {
     require $maintenance;
