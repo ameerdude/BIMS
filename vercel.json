@@ -28,7 +28,6 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://bimss.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -43,5 +42,5 @@
         "APP_MAINTENANCE_DRIVER": "cache",
         "APP_MAINTENANCE_STORE": "array"
     },
-    "installCommand": "npm install && npm run build"
+    "installCommand": "APP_URL=https://bimss.vercel.app npm install && APP_URL=https://bimss.vercel.app npm run build"
 }
