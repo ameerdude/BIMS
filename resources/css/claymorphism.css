@@ -1,0 +1,197 @@
+/* Claymorphism Design System for Barangay Registry */
+
+/* Clay Card - The signature claymorphism element */
+.clay-card {
+    background: linear-gradient(145deg, #f0f0f3, #e6e6e9);
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #d1d1d4, -8px -8px 16px #ffffff;
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.clay-card-sm {
+    background: linear-gradient(145deg, #f0f0f3, #e6e6e9);
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px #d1d1d4, -5px -5px 10px #ffffff;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* Clay Button */
+.clay-btn {
+    background: linear-gradient(145deg, #6366f1, #4f46e5);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px #d1d1d4, -4px -4px 8px #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.clay-btn:hover {
+    box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff;
+    transform: translateY(1px);
+}
+
+.clay-btn:active {
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.15), inset -3px -3px 6px rgba(255,255,255,0.3);
+    transform: translateY(2px);
+}
+
+.clay-btn-success {
+    background: linear-gradient(145deg, #22c55e, #16a34a);
+}
+
+.clay-btn-danger {
+    background: linear-gradient(145deg, #ef4444, #dc2626);
+}
+
+.clay-btn-warning {
+    background: linear-gradient(145deg, #f59e0b, #d97706);
+}
+
+.clay-btn-ghost {
+    background: linear-gradient(145deg, #f0f0f3, #e6e6e9);
+    color: #374151;
+    box-shadow: 4px 4px 8px #d1d1d4, -4px -4px 8px #ffffff;
+}
+
+/* Clay Input */
+.clay-input {
+    background: linear-gradient(145deg, #e6e6e9, #f0f0f3);
+    border-radius: 12px;
+    box-shadow: inset 3px 3px 6px #d1d1d4, inset -3px -3px 6px #ffffff;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 10px 16px;
+    width: 100%;
+    font-size: 0.875rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.clay-input:focus {
+    box-shadow: inset 2px 2px 4px #d1d1d4, inset -2px -2px 4px #ffffff, 0 0 0 3px rgba(99,102,241,0.3);
+}
+
+/* Clay Sidebar */
+.clay-sidebar {
+    background: linear-gradient(180deg, #f8f9fe 0%, #f0f1f7 100%);
+    box-shadow: 4px 0 20px rgba(0,0,0,0.05);
+}
+
+.clay-nav-item {
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin: 2px 0;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #6b7280;
+}
+
+.clay-nav-item:hover {
+    background: linear-gradient(145deg, #f0f0f3, #e6e6e9);
+    box-shadow: 3px 3px 6px #d1d1d4, -3px -3px 6px #ffffff;
+    color: #374151;
+}
+
+.clay-nav-item.active {
+    background: linear-gradient(145deg, #6366f1, #4f46e5);
+    color: white;
+    box-shadow: 4px 4px 8px rgba(99,102,241,0.3), -4px -4px 8px #ffffff;
+}
+
+/* Clay Badge */
+.clay-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.clay-badge-green { background: linear-gradient(145deg, #dcfce7, #bbf7d0); color: #166534; box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff; }
+.clay-badge-red { background: linear-gradient(145deg, #fee2e2, #fecaca); color: #991b1b; box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff; }
+.clay-badge-yellow { background: linear-gradient(145deg, #fef9c3, #fef08a); color: #854d0e; box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff; }
+.clay-badge-blue { background: linear-gradient(145deg, #dbeafe, #bfdbfe); color: #1e40af; box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff; }
+.clay-badge-purple { background: linear-gradient(145deg, #f3e8ff, #e9d5ff); color: #6b21a8; box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff; }
+.clay-badge-indigo { background: linear-gradient(145deg, #e0e7ff, #c7d2fe); color: #3730a3; box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff; }
+.clay-badge-orange { background: linear-gradient(145deg, #ffedd5, #fed7aa); color: #9a3412; box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff; }
+.clay-badge-gray { background: linear-gradient(145deg, #f3f4f6, #e5e7eb); color: #374151; box-shadow: 2px 2px 4px #d1d1d4, -2px -2px 4px #ffffff; }
+
+/* Clay Table */
+.clay-table th {
+    background: linear-gradient(145deg, #f8f9fe, #f0f1f7);
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.clay-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.clay-table tr:hover td {
+    background: linear-gradient(145deg, #fafbff, #f5f6fa);
+}
+
+/* Clay Stat Card */
+.clay-stat {
+    background: linear-gradient(145deg, #f0f0f3, #e6e6e9);
+    border-radius: 20px;
+    box-shadow: 6px 6px 12px #d1d1d4, -6px -6px 12px #ffffff;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.clay-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 8px 8px 16px #d1d1d4, -8px -8px 16px #ffffff;
+}
+
+/* Clay Alert */
+.clay-alert {
+    border-radius: 16px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 4px 4px 8px #d1d1d4, -4px -4px 8px #ffffff;
+}
+
+.clay-alert-success { background: linear-gradient(145deg, #dcfce7, #bbf7d0); color: #166534; }
+.clay-alert-warning { background: linear-gradient(145deg, #fef9c3, #fef08a); color: #854d0e; }
+.clay-alert-danger { background: linear-gradient(145deg, #fee2e2, #fecaca); color: #991b1b; }
+
+/* Clay Modal Overlay */
+.clay-modal-overlay {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+}
+
+/* Gradient backgrounds for stat cards */
+.clay-gradient-indigo { background: linear-gradient(145deg, #818cf8, #6366f1); }
+.clay-gradient-green { background: linear-gradient(145deg, #4ade80, #22c55e); }
+.clay-gradient-amber { background: linear-gradient(145deg, #fbbf24, #f59e0b); }
+.clay-gradient-blue { background: linear-gradient(145deg, #60a5fa, #3b82f6); }
+.clay-gradient-purple { background: linear-gradient(145deg, #c084fc, #a855f7); }
+.clay-gradient-rose { background: linear-gradient(145deg, #fb7185, #f43f5e); }
+.clay-gradient-emerald { background: linear-gradient(145deg, #34d399, #10b981); }
+.clay-gradient-orange { background: linear-gradient(145deg, #fb923c, #f97316); }
+
+/* Print styles */
+@media print {
+    .no-print { display: none !important; }
+    .clay-card, .clay-stat { box-shadow: none !important; border: 1px solid #e5e7eb !important; }
+    body { background: white !important; }
+}

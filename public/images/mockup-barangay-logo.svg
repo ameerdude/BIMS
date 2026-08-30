@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a5c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d2137;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a843;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8932a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#bBg)" stroke="url(#bGold)" stroke-width="3"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="84" fill="none" stroke="url(#bGold)" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="url(#bGold)" stroke-width="0.5"/>
+  <!-- Barangay Hall / Town Hall -->
+  <g transform="translate(100,60)" fill="url(#bGold)">
+    <!-- Roof / Pediment -->
+    <polygon points="-26,0 0,-16 26,0" fill="url(#bGold)"/>
+    <!-- Roof base -->
+    <rect x="-30" y="0" width="60" height="4" rx="1"/>
+    <!-- Pillars -->
+    <rect x="-22" y="4" width="4" height="28" rx="1"/>
+    <rect x="-8" y="4" width="4" height="28" rx="1"/>
+    <rect x="4" y="4" width="4" height="28" rx="1"/>
+    <rect x="18" y="4" width="4" height="28" rx="1"/>
+    <!-- Door -->
+    <rect x="-4" y="18" width="8" height="14" rx="1" fill="#0d2137"/>
+    <!-- Steps -->
+    <rect x="-28" y="32" width="56" height="3" rx="1"/>
+    <rect x="-32" y="35" width="64" height="3" rx="1"/>
+  </g>
+  <!-- Rice stalks left -->
+  <g transform="translate(40,80)" fill="none" stroke="url(#bGold)" stroke-width="1">
+    <path d="M0,0 Q2,-8 0,-18"/>
+    <path d="M0,-6 Q-4,-8 -6,-6"/>
+    <path d="M0,-6 Q4,-8 6,-6"/>
+    <path d="M0,-12 Q-4,-14 -6,-12"/>
+    <path d="M0,-12 Q4,-14 6,-12"/>
+    <circle cx="0" cy="-18" r="2" fill="url(#bGold)"/>
+  </g>
+  <!-- Rice stalks right -->
+  <g transform="translate(160,80)" fill="none" stroke="url(#bGold)" stroke-width="1">
+    <path d="M0,0 Q-2,-8 0,-18"/>
+    <path d="M0,-6 Q-4,-8 -6,-6"/>
+    <path d="M0,-6 Q4,-8 6,-6"/>
+    <path d="M0,-12 Q-4,-14 -6,-12"/>
+    <path d="M0,-12 Q4,-14 6,-12"/>
+    <circle cx="0" cy="-18" r="2" fill="url(#bGold)"/>
+  </g>
+  <!-- 8-rayed sun (Philippine symbol) -->
+  <g transform="translate(100,46)" fill="url(#bGold)">
+    <circle cx="0" cy="0" r="5"/>
+    <g stroke="url(#bGold)" stroke-width="1.5">
+      <line x1="0" y1="-8" x2="0" y2="-13"/>
+      <line x1="5.7" y1="-5.7" x2="9.2" y2="-9.2"/>
+      <line x1="8" y1="0" x2="13" y2="0"/>
+      <line x1="5.7" y1="5.7" x2="9.2" y2="9.2"/>
+      <line x1="-5.7" y1="-5.7" x2="-9.2" y2="-9.2"/>
+      <line x1="-8" y1="0" x2="-13" y2="0"/>
+      <line x1="-5.7" y1="5.7" x2="-9.2" y2="9.2"/>
+      <line x1="0" y1="8" x2="0" y2="13"/>
+    </g>
+  </g>
+  <!-- Curved text top -->
+  <path id="bArc1" d="M30,100 A70,70 0 0,1 170,100" fill="none"/>
+  <text font-family="Georgia, serif" font-size="7" fill="url(#bGold)" font-weight="bold" letter-spacing="1.5">
+    <textPath href="#bArc1" startOffset="50%" text-anchor="middle">REPUBLIC OF THE PHILIPPINES</textPath>
+  </text>
+  <!-- Curved text bottom -->
+  <path id="bArc2" d="M30,100 A70,70 0 0,0 170,100" fill="none"/>
+  <text font-family="Georgia, serif" font-size="8" fill="url(#bGold)" font-weight="bold" letter-spacing="2">
+    <textPath href="#bArc2" startOffset="50%" text-anchor="middle">BARANGAY MASAGANA</textPath>
+  </text>
+  <!-- Bottom text -->
+  <text x="100" y="178" text-anchor="middle" font-family="Georgia, serif" font-size="6.5" fill="url(#bGold)" letter-spacing="1">SAN PABLO CITY, LAGUNA</text>
+  <!-- Decorative dots -->
+  <circle cx="38" cy="100" r="2" fill="url(#bGold)"/>
+  <circle cx="162" cy="100" r="2" fill="url(#bGold)"/>
+</svg>

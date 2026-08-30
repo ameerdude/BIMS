@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="mBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a5c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d2137;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a843;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8932a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#mBg)" stroke="url(#mGold)" stroke-width="3"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="84" fill="none" stroke="url(#mGold)" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="url(#mGold)" stroke-width="0.5"/>
+  <!-- Shield shape -->
+  <g transform="translate(100,62)">
+    <path d="M0,-28 L22,-18 L22,8 C22,20 10,30 0,34 C-10,30 -22,20 -22,8 L-22,-18 Z" fill="none" stroke="url(#mGold)" stroke-width="2"/>
+    <!-- Sun rays -->
+    <circle cx="0" cy="0" r="8" fill="url(#mGold)"/>
+    <g stroke="url(#mGold)" stroke-width="1.5">
+      <line x1="0" y1="-12" x2="0" y2="-18"/>
+      <line x1="8.5" y1="-8.5" x2="12.7" y2="-12.7"/>
+      <line x1="12" y1="0" x2="18" y2="0"/>
+      <line x1="8.5" y1="8.5" x2="12.7" y2="12.7"/>
+      <line x1="-8.5" y1="-8.5" x2="-12.7" y2="-12.7"/>
+      <line x1="-12" y1="0" x2="-18" y2="0"/>
+      <line x1="-8.5" y1="8.5" x2="-12.7" y2="12.7"/>
+    </g>
+    <!-- Mountain silhouettes -->
+    <path d="M-18,16 L-8,4 L0,14 L10,2 L18,16 Z" fill="url(#mGold)" opacity="0.3"/>
+    <!-- Rice stalks -->
+    <path d="M-16,12 Q-14,6 -10,2" fill="none" stroke="url(#mGold)" stroke-width="1"/>
+    <path d="M16,12 Q14,6 10,2" fill="none" stroke="url(#mGold)" stroke-width="1"/>
+  </g>
+  <!-- Curved text: REPUBLIC OF THE PHILIPPINES -->
+  <path id="mArc1" d="M30,100 A70,70 0 0,1 170,100" fill="none"/>
+  <text font-family="Georgia, serif" font-size="7" fill="url(#mGold)" font-weight="bold" letter-spacing="1.5">
+    <textPath href="#mArc1" startOffset="50%" text-anchor="middle">REPUBLIC OF THE PHILIPPINES</textPath>
+  </text>
+  <!-- Curved text: CITY OF SAN PABLO -->
+  <path id="mArc2" d="M30,100 A70,70 0 0,0 170,100" fill="none"/>
+  <text font-family="Georgia, serif" font-size="8" fill="url(#mGold)" font-weight="bold" letter-spacing="2">
+    <textPath href="#mArc2" startOffset="50%" text-anchor="middle">CITY OF SAN PABLO</textPath>
+  </text>
+  <!-- Bottom text: PROVINCE OF LAGUNA -->
+  <text x="100" y="178" text-anchor="middle" font-family="Georgia, serif" font-size="6.5" fill="url(#mGold)" letter-spacing="1">PROVINCE OF LAGUNA</text>
+  <!-- Decorative dots -->
+  <circle cx="38" cy="100" r="2" fill="url(#mGold)"/>
+  <circle cx="162" cy="100" r="2" fill="url(#mGold)"/>
+</svg>

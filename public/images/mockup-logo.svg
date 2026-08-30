@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f2440;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a843;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8932a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#bg)" stroke="url(#gold)" stroke-width="3"/>
+  <!-- Inner circle border -->
+  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#gold)" stroke-width="1.5"/>
+  <!-- Arch / Government building -->
+  <g transform="translate(100,58)" fill="url(#gold)">
+    <!-- Pillars -->
+    <rect x="-30" y="10" width="6" height="36" rx="2"/>
+    <rect x="-16" y="10" width="6" height="36" rx="2"/>
+    <rect x="10" y="10" width="6" height="36" rx="2"/>
+    <rect x="24" y="10" width="6" height="36" rx="2"/>
+    <!-- Pediment (triangle) -->
+    <polygon points="-38,10 0,-14 38,10"/>
+    <!-- Base -->
+    <rect x="-34" y="46" width="68" height="5" rx="1"/>
+    <!-- Steps -->
+    <rect x="-38" y="51" width="76" height="3" rx="1"/>
+    <rect x="-42" y="54" width="84" height="3" rx="1"/>
+  </g>
+  <!-- Stars -->
+  <g fill="url(#gold)">
+    <polygon points="100,90 103,98 111,98 105,103 107,111 100,106 93,111 95,103 89,98 97,98" transform="scale(0.5) translate(100,30)"/>
+  </g>
+  <!-- Text: REPUBLIC OF THE PHILIPPINES -->
+  <text x="100" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="url(#gold)" font-weight="bold" letter-spacing="1.5">REPUBLIC OF THE PHILIPPINES</text>
+  <!-- Text: BARANGAY SAMPLE -->
+  <text x="100" y="164" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="url(#gold)" font-weight="bold" letter-spacing="2">BARANGAY SAMPLE</text>
+  <!-- Seal border decoration -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#gold)" stroke-width="0.5" stroke-dasharray="4,3"/>
+</svg>

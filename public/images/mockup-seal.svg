@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="sealGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a68832;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sealBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#152c47;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Scalloped edge (seal-like) -->
+  <g fill="url(#sealGold)">
+    <circle cx="100" cy="100" r="98" fill="url(#sealGold)"/>
+    <!-- Scallops around edge -->
+    <circle cx="100" cy="2" r="10" fill="url(#sealGold)"/>
+    <circle cx="138" cy="12" r="10" fill="url(#sealGold)"/>
+    <circle cx="169" cy="38" r="10" fill="url(#sealGold)"/>
+    <circle cx="188" cy="76" r="10" fill="url(#sealGold)"/>
+    <circle cx="198" cy="100" r="10" fill="url(#sealGold)"/>
+    <circle cx="188" cy="124" r="10" fill="url(#sealGold)"/>
+    <circle cx="169" cy="162" r="10" fill="url(#sealGold)"/>
+    <circle cx="138" cy="188" r="10" fill="url(#sealGold)"/>
+    <circle cx="100" cy="198" r="10" fill="url(#sealGold)"/>
+    <circle cx="62" cy="188" r="10" fill="url(#sealGold)"/>
+    <circle cx="31" cy="162" r="10" fill="url(#sealGold)"/>
+    <circle cx="12" cy="124" r="10" fill="url(#sealGold)"/>
+    <circle cx="2" cy="100" r="10" fill="url(#sealGold)"/>
+    <circle cx="12" cy="76" r="10" fill="url(#sealGold)"/>
+    <circle cx="31" cy="38" r="10" fill="url(#sealGold)"/>
+    <circle cx="62" cy="12" r="10" fill="url(#sealGold)"/>
+  </g>
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="84" fill="url(#sealBlue)"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="url(#sealGold)" stroke-width="1.5"/>
+  <!-- Center building -->
+  <g transform="translate(100,62)" fill="url(#sealGold)">
+    <rect x="-22" y="8" width="5" height="28" rx="1"/>
+    <rect x="-10" y="8" width="5" height="28" rx="1"/>
+    <rect x="5" y="8" width="5" height="28" rx="1"/>
+    <rect x="17" y="8" width="5" height="28" rx="1"/>
+    <polygon points="-28,8 0,-10 28,8"/>
+    <rect x="-26" y="36" width="52" height="3"/>
+  </g>
+  <!-- Circular text -->
+  <path id="sealTextTop" d="M 100,100 m -65,0 a 65,65 0 1,1 130,0" fill="none"/>
+  <text font-family="Georgia, serif" font-size="8" fill="url(#sealGold)" font-weight="bold" letter-spacing="2">
+    <textPath href="#sealTextTop" startOffset="50%" text-anchor="middle">OFFICIAL SEAL</textPath>
+  </text>
+  <path id="sealTextBottom" d="M 100,100 m 65,0 a 65,65 0 1,1 -130,0" fill="none"/>
+  <text font-family="Georgia, serif" font-size="7.5" fill="url(#sealGold)" font-weight="bold" letter-spacing="1.5">
+    <textPath href="#sealTextBottom" startOffset="50%" text-anchor="middle">BARANGAY SAMPLE</textPath>
+  </text>
+  <!-- Center star -->
+  <g fill="url(#sealGold)" transform="translate(100,98)">
+    <polygon points="0,-10 2.9,-4 9.5,-3.1 4.5,1.5 5.9,8.1 0,5 -5.9,8.1 -4.5,1.5 -9.5,-3.1 -2.9,-4"/>
+  </g>
+</svg>
