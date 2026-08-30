@@ -34,10 +34,13 @@
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
-        "CACHE_DRIVER": "array",
+        "CACHE_STORE": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
-        "SESSION_LIFETIME": "120"
+        "SESSION_LIFETIME": "120",
+        "QUEUE_CONNECTION": "sync",
+        "APP_MAINTENANCE_DRIVER": "cache",
+        "APP_MAINTENANCE_STORE": "array"
     },
     "installCommand": "npm install && npm run build"
 }
