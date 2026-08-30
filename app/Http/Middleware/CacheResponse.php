@@ -13,7 +13,7 @@ class CacheResponse
 
         // Cache Livewire page GETs for 60 seconds (browser cache)
         if ($request->isMethod('GET') && !$request->expectsJson()) {
-            $response->headers->set('Cache-Control', 'public, max-age=60, s-maxage=60');
+            $response->headers->set('Cache-Control', 'public, max-age=300, s-maxage=300, stale-while-revalidate=600');
             $response->headers->set('X-Content-Type-Options', 'nosniff');
         }
 
