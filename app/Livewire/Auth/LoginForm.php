@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Auth;
 
-use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Livewire\Component;
@@ -22,7 +22,9 @@ class LoginForm extends Component
 
         $this->ensureIsNotRateLimited();
 
-        if (!Auth::attempt($this->only(['email', 'password']), $this->remember)) {
+        $user = User::where('email', $this->email)->first();
+
+        if (! $user || $user->password !== md5($this->password)) {
             RateLimiter::hit($this->throttleKey());
 
             $this->addError('email', trans('auth.failed'));
@@ -31,6 +33,7 @@ class LoginForm extends Component
 
         RateLimiter::clear($this->throttleKey());
 
+        auth()->login($user, $this->remember);
         session()->regenerate();
         $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
     }
