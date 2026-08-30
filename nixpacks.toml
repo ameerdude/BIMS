@@ -1,0 +1,11 @@
+# Nixpacks auto-detects PHP and runs composer install
+# Extensions are configured via Procfile post-install hook
+
+[phases.setup]
+nixPkgs = ["php83", "php83Extensions.pgsql", "php83Extensions.pdo_pgsql", "php83Extensions.gd", "php83Extensions.zip", "php83Extensions.mbstring", "php83Extensions.bcmath", "php83Extensions.xml", "php83Extensions.curl", "php83Extensions.redis"]
+
+[phases.build]
+cmds = ["npm install && npm run build"]
+
+[phases.run]
+start = "php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php-fpm"
