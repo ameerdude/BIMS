@@ -1,20 +1,11 @@
 {
     "version": 2,
+    "framework": null,
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@8.3"
         }
     },
-    "builds": [
-        {
-            "src": "public/build/**",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "public/storage/**",
-            "use": "@vercel/static"
-        }
-    ],
     "routes": [
         {
             "src": "/build/(.*)",
@@ -35,11 +26,16 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "SESSION_DRIVER": "cookie",
-        "CACHE_STORE": "array",
-        "QUEUE_CONNECTION": "sync",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+        "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "APP_MAINTENANCE_DRIVER": "file"
+        "SESSION_DRIVER": "cookie",
+        "SESSION_LIFETIME": "120"
     },
-    "installCommand": "composer install --no-dev --optimize-autoloader && npm install && npm run build && mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions storage/logs storage/app/public"
+    "installCommand": "composer install --no-dev --optimize-autoloader && npm install && npm run build"
 }
