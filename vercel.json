@@ -43,5 +43,5 @@
         "APP_MAINTENANCE_DRIVER": "cache",
         "APP_MAINTENANCE_STORE": "array"
     },
-    "installCommand": "APP_URL=https://bimss.vercel.app npm install && APP_URL=https://bimss.vercel.app npm run build"
+    "installCommand": "echo 'APP_URL=https://bimss.vercel.app' > .env && npm install && npm run build"
 }
