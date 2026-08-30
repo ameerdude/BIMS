@@ -8,11 +8,21 @@ new #[Layout("layouts.app")] class extends Component
     #[Computed]
     public function stats(): array
     {
+        $counts = \Illuminate\Support\Facades\DB::selectOne('
+            SELECT 
+                (SELECT count(*) FROM residents WHERE is_active = true) AS residents,
+                (SELECT count(*) FROM documents_issued) AS documents,
+                (SELECT count(*) FROM barangay_ids) AS ids,
+                (SELECT count(*) FROM health_records) AS health,
+                (SELECT count(*) FROM service_requests WHERE status = ?) AS open_requests,
+                (SELECT COALESCE(SUM(amount), 0) FROM revenue_records) AS revenue
+        ', ['open']);
+
         return [
             [
                 'route' => 'residents.index',
                 'icon' => '<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>',
-                'count' => \App\Models\Resident::where('is_active', true)->count(),
+                'count' => $counts->residents,
                 'label' => 'Total Residents',
                 'color' => '#2563eb',
                 'bg' => '#eff6ff',
@@ -20,7 +30,7 @@ new #[Layout("layouts.app")] class extends Component
             [
                 'route' => 'documents.index',
                 'icon' => '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
-                'count' => \App\Models\DocumentIssued::count(),
+                'count' => $counts->documents,
                 'label' => 'Documents Issued',
                 'color' => '#16a34a',
                 'bg' => '#f0fdf4',
@@ -28,7 +38,7 @@ new #[Layout("layouts.app")] class extends Component
             [
                 'route' => 'ids.index',
                 'icon' => '<rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/>',
-                'count' => \App\Models\BarangayId::count(),
+                'count' => $counts->ids,
                 'label' => 'IDs Issued',
                 'color' => '#ea580c',
                 'bg' => '#fff7ed',
@@ -36,7 +46,7 @@ new #[Layout("layouts.app")] class extends Component
             [
                 'route' => 'health.index',
                 'icon' => '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
-                'count' => \App\Models\HealthRecord::count(),
+                'count' => $counts->health,
                 'label' => 'Health Records',
                 'color' => '#0891b2',
                 'bg' => '#ecfeff',
@@ -44,7 +54,7 @@ new #[Layout("layouts.app")] class extends Component
             [
                 'route' => 'services.index',
                 'icon' => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
-                'count' => \App\Models\ServiceRequest::where('status', 'open')->count(),
+                'count' => $counts->open_requests,
                 'label' => 'Open Requests',
                 'color' => '#d97706',
                 'bg' => '#fffbeb',
@@ -52,7 +62,7 @@ new #[Layout("layouts.app")] class extends Component
             [
                 'route' => 'revenue.index',
                 'icon' => '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>',
-                'count' => '₱' . number_format(\App\Models\RevenueRecord::sum('amount'), 0),
+                'count' => '₱' . number_format($counts->revenue, 0),
                 'label' => 'Total Revenue',
                 'color' => '#16a34a',
                 'bg' => '#f0fdf4',
