@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => str_replace('http://', 'https://', env('APP_URL', 'http://localhost')),
+    'url' => preg_replace('#^http://#', 'https://', env('APP_URL') ?: 'https://bimss.vercel.app'),
 
     /*
     |--------------------------------------------------------------------------
